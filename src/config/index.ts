@@ -13,6 +13,7 @@ import { rateLimitConfig } from './rate-limit.config';
 import { throttlerConfig } from './throttler.config';
 import { shutdownConfig } from './shutdown.config';
 import { webhookConfig } from './webhook.config';
+import { balanceCacheConfig } from './balance-cache.config';
 
 export * from './app.config';
 export * from './database.config';
@@ -28,6 +29,7 @@ export * from './rate-limit.config';
 export * from './throttler.config';
 export * from './shutdown.config';
 export * from './webhook.config';
+export * from './balance-cache.config';
 
 /**
  * Global configuration module. Every slice is registered via `registerAs` and
@@ -52,5 +54,6 @@ export const AppConfigModule = ConfigModule.forRoot({
     throttlerConfig,
     shutdownConfig,
     webhookConfig,
+    balanceCacheConfig,
   ],
 });
